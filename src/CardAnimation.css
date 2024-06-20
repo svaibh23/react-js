@@ -1,0 +1,53 @@
+/* src/CardAnimation.css */
+.card-container {
+  display: inline-block;
+  perspective: 1000px;
+  margin-bottom: 20px; /* Example: Adds space below the card */
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-color: #f0f0f0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.back {
+  background-color: #d9edff;
+  color: #333;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  text-align: center;
+}
